@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZpMHpmNTY5dnR5N3RqdnA1N2MxMmFicGU3NWM0ejFydm8wZmJ3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c76IJLufpNwSULPk77/giphy.gif); /* Add your background image or GIF URL here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Adjust text color for better visibility on the background */
+        }
+        #message {
+            margin: 100px;
+            padding: 20px;
+            border: none;
+
+        }
+
+        #message p:nth-child(2),
+        #message p:nth-child(3) {
+            padding: 10px;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        #response {
+            margin-top: 5px;
+            font-weight: bold;
+            font-size: 25px;
+            color: #ff14eb;
+        }
+        .response-button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="message">
+    <h1>My Dear and my Sweetheart</h1>
+    <p>I have something special to ask you...</p>
+    <p>Will you be my Valentine????</p>
+    <!-- Add any additional personalized message or styling here -->
+</div>
+
+<div id="response">
+    <button class="response-button" onclick="respond('Yes')">Yes</button>
+    <button class="response-button" onclick="respond('No')">No</button>
+</div>
+
+<script>
+    function respond(answer) {
+        if (answer === 'No') {
+            document.getElementById('response').innerHTML = '<p>Oh no! 😢 😢 😢 I will cryyyyyyyyy</p><button class="response-button" onclick="askAgain()">Ask Again</button>';
+        } else {
+            document.getElementById('response').innerHTML = 'YAAAAAAAAAAY! I LOVE YOU SWEETHEART<3';
+            // You can add further actions based on her response
+        }
+    }
+
+    function askAgain() {
+        document.getElementById('response').innerHTML = '<button class="response-button" onclick="respond(\'Yes\')">Yes</button><button class="response-button" onclick="respond(\'No\')">No</button>';
+    }
+</script>
+
+</body>
+</html>
